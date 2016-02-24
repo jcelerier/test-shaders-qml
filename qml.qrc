@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>MainForm.ui.qml</file>
+        <file>ShadedArea.qml</file>
+        <file>DrawArea.qml</file>
+    </qresource>
+</RCC>
