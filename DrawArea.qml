@@ -12,6 +12,20 @@ Rectangle {
     property int xpos_prev
     property int ypos_prev
 
+    property real blurRadius : 8
+
+    property bool wasCleared : false
+
+    signal ptrClicked(real mouseX, real mouseY)
+    signal posChanged(real mouseX, real mouseY)
+    signal ptrReleased(real mouseX, real mouseY)
+
+    signal clear
+    onClear: {
+        wasCleared = true
+        myCanvas.requestPaint()
+    }
+
     property double hue : 0.3
 
     Timer {
@@ -39,20 +53,28 @@ Rectangle {
 
         onPaint: {
             var ctx = getContext('2d')
-
-         //   ctx.fillStyle = 'rgba(0,0,0,0.05)';
-         //   ctx.fillRect(0, 0, context.canvas.width, context.canvas.height);
+            if(wasCleared) {
+                ctx.clearRect(0, 0, width, height);
+                wasCleared = false
+            }
 
             ctx.strokeStyle = 'hsl(' +  ~~(hue * 360)  + ', 50%, 50%)';
 
             ctx.beginPath();
-            ctx.moveTo(xpos_prev,ypos_prev);
+            if(xpos != xpos_prev || ypos != ypos_prev)
+            {
+                ctx.moveTo(xpos_prev,ypos_prev);
+            }
+            else
+            {
+                ctx.moveTo(xpos_prev - 1,ypos_prev + 1);
+            }
+
             ctx.lineTo(xpos,ypos);
             ctx.lineWidth = 12;
             context.lineJoin = 'round';
             ctx.lineCap = 'round';
             ctx.stroke();
-
         }
 
         MouseArea{
@@ -65,21 +87,24 @@ Rectangle {
                 xpos_prev = xpos
                 ypos_prev = ypos
                 myCanvas.requestPaint()
+                ptrClicked(mouseX, mouseY)
             }
 
             onMouseXChanged: {
                 myCanvas.requestPaint()
+                posChanged(mouseX, mouseY)
             }
 
             onMouseYChanged: {
                 myCanvas.requestPaint()
+                posChanged(mouseX, mouseY)
             }
 
             onReleased: {
                 myTimer.stop()
+                ptrReleased(mouseX, mouseY)
             }
         }
-
     }
 
     ShaderEffect {
@@ -127,7 +152,7 @@ Rectangle {
         id: myBlur
         source: myBlend
         anchors.fill: myBlend
-        radius: 8
+        radius: blurRadius
         samples: 16
     }
 
