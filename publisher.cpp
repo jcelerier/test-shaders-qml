@@ -3,16 +3,13 @@
 #include <string>
 #include <QDebug>
 #include <iostream>
-/*#include <Editor/Domain.h>
-#include <Network/Node.h>
-#include <Network/Address.h>
-#include <Network/Device.h>
-*/
-using namespace OSSIA;
 using namespace std;
 
-Publisher::Publisher() : Transmitter(){}
-Publisher::Publisher(int pPort, int rPort) : Transmitter(pPort, rPort) {}
+Publisher::Publisher(int pPort, int rPort) : Transmitter(pPort, rPort),
+    m_dev(m_map, "newDevice", 9998, "127.0.0.1", 13579)
+{
+
+}
 
 void Publisher::init() {
     /*
@@ -52,12 +49,6 @@ void Publisher::init() {
     _minuitDevice = Device::create(_minuitProtocol, "i-score");*/
 }
 
-/*void printValueCallback(const Value * v)
-{
-    Float * val = (Float *)v;
-    cout << val->value << endl;
-}
-*/
 void Publisher::relayChanges(const QPointF& newXYValue)
 {/*
     OSSIA::Float x(newXYValue.x());

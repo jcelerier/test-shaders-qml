@@ -1,0 +1,3 @@
+[submodule "coppa"]
+	path = coppa
+	url = https://github.com/jcelerier/coppa
