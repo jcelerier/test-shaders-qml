@@ -31,6 +31,6 @@ class Publisher : public Transmitter
         std::shared_ptr<OSSIA::Address> _released;
 };
 
-void printValueCallback(const OSSIA::Value*);
+//void printValueCallback(const OSSIA::Value*);
 
 #endif // PUBLISHER_H

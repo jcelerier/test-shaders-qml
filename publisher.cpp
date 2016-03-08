@@ -3,11 +3,11 @@
 #include <string>
 #include <QDebug>
 #include <iostream>
-#include <Editor/Domain.h>
+/*#include <Editor/Domain.h>
 #include <Network/Node.h>
 #include <Network/Address.h>
 #include <Network/Device.h>
-
+*/
 using namespace OSSIA;
 using namespace std;
 
@@ -15,6 +15,7 @@ Publisher::Publisher() : Transmitter(){}
 Publisher::Publisher(int pPort, int rPort) : Transmitter(pPort, rPort) {}
 
 void Publisher::init() {
+    /*
     _localProtocol = Local::create();
     _localDevice = Device::create(_localProtocol, "Publisher");
 
@@ -48,38 +49,39 @@ void Publisher::init() {
     _released = rel_n->createAddress(Value::Type::IMPULSE);
 
     _minuitProtocol = Minuit::create("127.0.0.1", _pubPort, _recPort);
-    _minuitDevice = Device::create(_minuitProtocol, "i-score");
+    _minuitDevice = Device::create(_minuitProtocol, "i-score");*/
 }
 
-void printValueCallback(const Value * v) {
+/*void printValueCallback(const Value * v)
+{
     Float * val = (Float *)v;
     cout << val->value << endl;
 }
-
+*/
 void Publisher::relayChanges(const QPointF& newXYValue)
-{
+{/*
     OSSIA::Float x(newXYValue.x());
     OSSIA::Float y(newXYValue.y());
 
     _xAddress->pushValue(&x);
-    _yAddress->pushValue(&y);
+    _yAddress->pushValue(&y);*/
 }
 
 void Publisher::clicked(const QPointF& newXYValue)
-{
+{/*
     OSSIA::Impulse i;
 
     _clicked->pushValue(&i);
 
-    relayChanges(newXYValue);
+    relayChanges(newXYValue);*/
 }
 
 void Publisher::released(const QPointF& newXYValue)
-{
+{/*
     OSSIA::Impulse i;
 
     _released->pushValue(&i);
 
-    relayChanges(newXYValue);
+    relayChanges(newXYValue);*/
 }
 

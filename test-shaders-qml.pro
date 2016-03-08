@@ -2,8 +2,10 @@ TEMPLATE = app
 
 QT += qml quick
 CONFIG += c++11
-
-SOURCES += main.cpp
+QMAKE_CXXFLAGS += -Ofast -march=armv7-a
+SOURCES += main.cpp \
+    publisher.cpp \
+    transmitter.cpp
 
 RESOURCES += qml.qrc
 
@@ -12,3 +14,8 @@ QML_IMPORT_PATH =
 
 # Default rules for deployment.
 include(deployment.pri)
+
+HEADERS += \
+    publisher.h \
+    ossia_includes.h \
+    transmitter.h

@@ -3,9 +3,9 @@
 
 #include <QObject>
 #include <memory>
-
+/*
 #include "ossia_includes.h"
-
+*/
 #define DEFAULT_PPORT 6666
 #define DEFAULT_RPORT 9999
 
@@ -18,7 +18,7 @@ public:
     Transmitter(int, int);
     virtual void init() = 0;
 
-protected:
+protected:/*
     std::shared_ptr<OSSIA::Local> _localProtocol;
     std::shared_ptr<OSSIA::Device> _localDevice;
 
@@ -31,7 +31,7 @@ protected:
 
     std::shared_ptr<OSSIA::Address> _xAddress;
     std::shared_ptr<OSSIA::Address> _yAddress;
-
+*/
     int _pubPort;
     int _recPort;
 
