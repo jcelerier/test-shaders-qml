@@ -41,10 +41,11 @@ class my_device
         auto& map() const
         { return m_map; }
 
-        template<typename String, typename Arg>
-        void update(param_t<String> path, Arg&& val)
+
+        template<typename Str, typename Fun>
+        void update(param_t<Str> path, Fun&& f)
         {
-            auto map_it = m_map.update(path, std::forward<Arg>(val));
+            auto map_it = m_map.update(path, std::move(f));
             if(map_it != m_map.end())
             {
                 auto res = *map_it;
@@ -55,10 +56,7 @@ class my_device
                 {
                     // A:listen /WhereToListen:attribute value (each time the attribute change if the listening is turned on)
                     auto addr = nameTable.get_action(minuit_action::ListenReply);
-                    thread_local std::stringstream stream;
-
-                    stream << path << ":" << to_minuit_attribute_text(minuit_attribute::Value);
-                    auto final_path = stream.str();
+                    std::string final_path = path.to_string() + ":" + to_minuit_attribute_text(minuit_attribute::Value).to_string();
                     client.sender.send(
                                 string_view(addr),
                                 string_view(final_path),
@@ -66,6 +64,11 @@ class my_device
                 }
 
             }
+        }
+
+        void push(coppa::string_view str, Variant v)
+        {
+            update<coppa::string_view>(str, [&] (auto& p) { p.value = v; });
         }
 
         Nano::Signal<void(const Parameter&)> on_value_changed;
@@ -97,6 +100,7 @@ class Publisher : public Transmitter
 
     private:
 
+        void handleChange(const coppa::ossia::Parameter& p);
         basic_map<ParameterMapType<Parameter>> m_base_map;
         //locked_map<basic_map<ParameterMapType<Parameter>>> m_map{m_base_map};
         my_device m_dev;
