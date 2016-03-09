@@ -6,7 +6,7 @@
 using namespace std;
 
 Publisher::Publisher(int pPort, int rPort) : Transmitter(pPort, rPort),
-    m_dev(m_base_map, "newDevice", 9999, "127.0.0.1", 6666)
+    m_dev(m_base_map, "newDevice", 9998, "127.0.0.1", 13579)
 {
 
 }
