@@ -9,6 +9,7 @@ SOURCES += main.cpp \
 
 RESOURCES += qml.qrc
 INCLUDEPATH += coppa
+INCLUDEPATH += coppa/oscpack
 INCLUDEPATH += coppa/variant/include
 
 # Additional import path used to resolve QML modules in Qt Creator's code model

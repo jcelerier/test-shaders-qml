@@ -31,7 +31,7 @@ Rectangle {
     Timer {
         id: myTimer
         repeat: true
-        interval: 16
+        interval: 1
         running: true
         onTriggered: {
             if(myMouseArea.pressed)

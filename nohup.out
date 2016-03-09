@@ -1,0 +1,43 @@
+"DebuggerItem \"/opt/android-ndk/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/bin/arm-linux-androideabi-gdb\" ({a9dc8a83-ba28-4420-b242-ea32c584376b}) read from \"/home/jcelerier/.config/QtProject/qtcreator/debuggers.xml\" dropped since it is not valid."
+Unknown debugger id {a9dc8a83-ba28-4420-b242-ea32c584376b} in kit Android for armeabi-v7a (GCC 4.9, Qt 5.6.0)
+SOFT ASSERT: "item" in file /build/qtcreator/src/qt-creator/src/plugins/debugger/debuggerkitinformation.cpp, line 343
+Skipping prl file '/opt/Qt/5.6/android_armv7/lib/libQt5Zlib.prl', because it cannot be opened (No such file or directory).
+Skipping prl file '/opt/Qt/5.6/android_armv7/lib/libQt5UiPlugin.prl', because it cannot be opened (No such file or directory).
+Skipping prl file '/opt/Qt/5.6/android_armv7/lib/libQt5Zlib.prl', because it cannot be opened (No such file or directory).
+Skipping prl file '/opt/Qt/5.6/android_armv7/lib/libQt5UiPlugin.prl', because it cannot be opened (No such file or directory).
+Skipping prl file '/opt/Qt/5.6/android_armv7/lib/libQt5Zlib.prl', because it cannot be opened (No such file or directory).
+Skipping prl file '/opt/Qt/5.6/android_armv7/lib/libQt5UiPlugin.prl', because it cannot be opened (No such file or directory).
+Skipping prl file '/opt/Qt/5.6/android_armv7/lib/libQt5Zlib.prl', because it cannot be opened (No such file or directory).
+Skipping prl file '/opt/Qt/5.6/android_armv7/lib/libQt5UiPlugin.prl', because it cannot be opened (No such file or directory).
+Skipping prl file '/opt/Qt/5.6/android_armv7/lib/libQt5Zlib.prl', because it cannot be opened (No such file or directory).
+Skipping prl file '/opt/Qt/5.6/android_armv7/lib/libQt5UiPlugin.prl', because it cannot be opened (No such file or directory).
+Skipping prl file '/opt/Qt/5.6/android_armv7/lib/libQt5Zlib.prl', because it cannot be opened (No such file or directory).
+Skipping prl file '/opt/Qt/5.6/android_armv7/lib/libQt5UiPlugin.prl', because it cannot be opened (No such file or directory).
+Skipping prl file '/opt/Qt/5.6/android_armv7/lib/libQt5Zlib.prl', because it cannot be opened (No such file or directory).
+Skipping prl file '/opt/Qt/5.6/android_armv7/lib/libQt5UiPlugin.prl', because it cannot be opened (No such file or directory).
+Skipping prl file '/opt/Qt/5.6/android_armv7/lib/libQt5Zlib.prl', because it cannot be opened (No such file or directory).
+Skipping prl file '/opt/Qt/5.6/android_armv7/lib/libQt5UiPlugin.prl', because it cannot be opened (No such file or directory).
+Skipping prl file '/opt/Qt/5.6/android_armv7/lib/libQt5Zlib.prl', because it cannot be opened (No such file or directory).
+Skipping prl file '/opt/Qt/5.6/android_armv7/lib/libQt5UiPlugin.prl', because it cannot be opened (No such file or directory).
+Skipping prl file '/opt/Qt/5.6/android_armv7/lib/libQt5Zlib.prl', because it cannot be opened (No such file or directory).
+Skipping prl file '/opt/Qt/5.6/android_armv7/lib/libQt5UiPlugin.prl', because it cannot be opened (No such file or directory).
+Skipping prl file '/opt/Qt/5.6/android_armv7/lib/libQt5Zlib.prl', because it cannot be opened (No such file or directory).
+Skipping prl file '/opt/Qt/5.6/android_armv7/lib/libQt5UiPlugin.prl', because it cannot be opened (No such file or directory).
+
+(qtcreator-bin:6024): Gtk-WARNING **: Theme directory  of theme default.kde4 has no size field
+
+QTextCursor::setPosition: Position '7398' out of range
+QIODevice::read (QProcess): device not open
+
+** (pcmanfm-qt:13732): WARNING **: XDG_TEMPLATES_DIR is set to invalid path, ignoring it
+isPrimaryInstance
+delete ProxyFolderModel
+aboutToQuit
+delete FolderModel
+QInotifyFileSystemWatcherEngine::addPaths: inotify_add_watch failed: Aucun fichier ou dossier de ce type
+QInotifyFileSystemWatcherEngine::addPaths: inotify_add_watch failed: Aucun fichier ou dossier de ce type
+QInotifyFileSystemWatcherEngine::addPaths: inotify_add_watch failed: Aucun fichier ou dossier de ce type
+QInotifyFileSystemWatcherEngine::addPaths: inotify_add_watch failed: Aucun fichier ou dossier de ce type
+QInotifyFileSystemWatcherEngine::addPaths: inotify_add_watch failed: Aucun fichier ou dossier de ce type
+QInotifyFileSystemWatcherEngine::addPaths: inotify_add_watch failed: Aucun fichier ou dossier de ce type
+QInotifyFileSystemWatcherEngine::addPaths: inotify_add_watch failed: Aucun fichier ou dossier de ce type
