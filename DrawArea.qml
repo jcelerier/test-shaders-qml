@@ -3,8 +3,8 @@ import QtQuick 2.0
 import QtGraphicalEffects 1.0
 
 Rectangle {
-    width: 900
-    height: 900
+    width: parent.width
+    height: parent.height
 
     property int xpos
     property int ypos
@@ -71,7 +71,7 @@ Rectangle {
             }
 
             ctx.lineTo(xpos,ypos);
-            ctx.lineWidth = 12;
+            ctx.lineWidth = 36;
             context.lineJoin = 'round';
             ctx.lineCap = 'round';
             ctx.stroke();
@@ -109,7 +109,7 @@ Rectangle {
 
     ShaderEffect {
                id: myShader
-               width: 900; height: 900
+               width: parent.width; height: parent.height
                property real qt_Opacity: 0.1
                property real qt_Hue: 0.5
                property variant src: ShaderEffectSource {
